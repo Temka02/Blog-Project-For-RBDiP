@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('create_post') }}">Create Post</a>
+    </nav>
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
