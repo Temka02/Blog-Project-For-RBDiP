@@ -11,7 +11,7 @@ with app.app_context():
         db.session.commit()
 
     posts = []
-    for i in range(5):
+    for i in range(10):
         p = Post(title=f"Post {i + 1}", content=f"Content {i + 1}", author=admin)
         db.session.add(p)
         posts.append(p)
